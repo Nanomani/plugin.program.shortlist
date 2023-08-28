@@ -167,6 +167,11 @@ else:
             info['plotoutline'] = item.plotoutline
             info['title'] = item.title
             info['count'] = count
+            info['genre'] = item.genre
+            info['votes'] = item.votes
+            info['mpaa'] = item.mpaa
+            info['writer'] = item.writer
+            info['director'] = item.director
 
             li.setInfo( 'video', info )
 
@@ -204,7 +209,7 @@ else:
             li.addContextMenuItems( commands )
 
             # Add listitem to directory
-            xbmcplugin.addDirectoryItem(handle=addon_handle, url=filename, listitem=li)
+            xbmcplugin.addDirectoryItem(handle=addon_handle, url=filename, listitem=li, isFolder=item.is_folder)
             count = count + 1
         xbmcplugin.endOfDirectory(addon_handle)
 

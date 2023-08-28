@@ -15,5 +15,11 @@ class ShortlistItem:
     clearart = ""
     clearlogo = ""
     landscape = ""
-    icon = "" 
-    
+    icon = ""
+    genre = ""
+    votes = 0
+    mpaa = ""
+    writer = ""
+    director = ""
+    is_folder = False
+	
